@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Beater</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      input{
+          text-transform: lowercase;
+          }
+      @media (max-width: 560px) {
+        #current-word {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-light text-dark pb-4">
+    <header class="bg-success text-center p-2 mb-3">
+      <h1 class="text-white">WordBeater</h1>
+    </header>
+
+    <div class="container text-center">
+      <!-- Word & Input -->
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          Type The Given Word Within
+          <span class="text-success font-weight-bold" id="seconds">10</span>
+          Seconds.
+
+          <br />
+
+          <label for="word-input">
+            <h2
+              class="display-2 mb-5"
+              id="current-word"
+              style="pointer-events: none; user-select: none"
+            >
+              ...
+            </h2>
+          </label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="word-input"
+            placeholder="Start the game..."
+            autofocus
+          />
+
+          <h4 class="mt-3" id="message"></h4>
+
+          <!-- Time & Score Area -->
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <h3>Time Left: <span id="time">10</span></h3>
+            </div>
+            <div class="col-md-6">
+              <h3>Score: <span id="score" class="text-success">0</span></h3>
+            </div>
+          </div>
+
+          <!-- How to Play? -->
+          <div class="row mt-5 pb-3">
+            <div class="col-md-12">
+              <div class="card card-body bg-primary text-white">
+                <h4>Instruction</h4>
+                <p>
+                  Type each word in the given amount of seconds to score. To
+                  play again, just type the current word. Your Score will reset
+                  automatically.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center">
+      <p>
+        Made With <span class="text-danger"> ♥</span> By
+        <a href="https://github.com/mirzasaikatahmmed/" target="_blank"
+          >Mirza Saikat Ahmmed</a
+        >
+      </p>
+      <a
+        class="text-success"
+        href="https://youtu.be/Yw-SYSG-028"
+        target="_blank"
+        >Special Thanks to Brad Traversy</a
+      >
+    </footer>
+    <!-- Main JS Source -->
+    <script src="main.js"></script>
+  </body>
+</html>
